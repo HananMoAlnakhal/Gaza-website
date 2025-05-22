@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>before war</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/GallerySlides.css" />
+  </head>
+  <body>
+    <nav>
+      <div
+        class="content-fragment fragment-cta"
+        style="position: fixed; top: 20px; left: 20px"
+      >
+        <a href="about.html" class="cta-link">
+          <div class="cta-box"></div>
+          <span class="cta-text" style="font-size: 3rem">i</span>
+        </a>
+      </div>
+
+      <a href="../index.html">
+        <h1 class="Hero-title">غزة</h1>
+      </a>
+    </nav>
+    <section>
+      <div class="SeOfCards">
+        <button class="arrow left"><</button>
+        <div class="c" style="--quan: 3">
+          <div class="box" style="--pos: 1">
+            <div class="imgBx">
+              <img src="../assets/Gaza/before war3.jpg" />
+            </div>
+            <div class="content">
+              <h3><</h3>
+              <h1>ميناء غزة</h1>
+              <p>ميناء غزة كانت المنفس الوحيد في هذا القطاع المحاصر</p>
+              <h1></h1>
+            </div>
+          </div>
+          <div class="box" style="--pos: 2">
+            <div class="imgBx">
+              <img src="../assets/Gaza/قصر الباشا.jpg" />
+            </div>
+            <div class="content">
+              <h3><</h3>
+              <h1>قصر الباشا</h1>
+              <p>
+                أحد المعالم الأثرية في مدينة غزة <br />
+                تم تدميره في الحرب
+              </p>
+              <h1></h1>
+            </div>
+          </div>
+          <div class="box" style="--pos: 3">
+            <div class="imgBx">
+              <img src="../assets/Gaza/مقبرة الانجليز.jpg" />
+            </div>
+            <div class="content">
+              <h3><</h3>
+              <h1>مقبرة الانجليز - مدينة غزة</h1>
+              <!-- <p>ميناء غزة كانت المنفس الوحيد في هذا القطاع المحاصر</p> -->
+              <h1></h1>
+            </div>
+          </div>
+          <div class="box" style="--pos: 4">
+            <div class="imgBx">
+              <img src="../assets/Gaza/المسجد العمري .jpeg" />
+            </div>
+            <div class="content">
+              <h3><</h3>
+              <h1>المسجد العمري</h1>
+              <p>احد الأماكن الأثرية التي دمرت في الحرب</p>
+            </div>
+          </div>
+          <div class="box" style="--pos: 5">
+            <div class="imgBx">
+              <img src="../assets/Gaza/المينا.jpg" />
+            </div>
+            <div class="content">
+              <h3><</h3>
+
+              <p>ميناء غزة كانت المنفس الوحيد في هذا القطاع المحاصر</p>
+              <h1></h1>
+            </div>
+          </div>
+          <div class="box" style="--pos: 6">
+            <div class="imgBx">
+              <img src="../assets/Gaza/Before war7.jpg" />
+            </div>
+            <div class="content">
+              <h3><</h3>
+              <h1>الكورنيش</h1>
+              <p>الكورنيش قبل الحرب</p>
+              <h1></h1>
+            </div>
+          </div>
+        </div>
+        <button class="arrow right">></button>
+      </div>
+      <a class="nextButton" href="./AfterWar.html">
+        <h2>مجموعة اخرى ></h2>
+      </a>
+    </section>
+    <script type="text/javascript">
+      let Imeges = document.querySelector(".c");
+      let preimages = Imeges.innerHTML;
+      for (let i = 1; i < 36; i++) {
+        preimages =
+          preimages +
+          `<div class="box img-only"><div class="imgBx"><img src="../assets/Gaza/${i}.png" /></div></div>`;
+        Imeges.innerHTML = preimages;
+      }
+    </script>
+    <script type="text/javascript">
+      let slider = document.querySelector(".c");
+      let nextBtn = document.querySelector(".arrow.right");
+      let prevBtn = document.querySelector(".arrow.left");
+      nextBtn.onclick = () => {
+        slider.append(slider.querySelector(".box:first-child"));
+      };
+      prevBtn.onclick = () => {
+        slider.prepend(slider.querySelector(".box:last-child"));
+      };
+    </script>
+  </body>
+</html>

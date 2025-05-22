@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>before war</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/GallerySlides.css" />
+  </head>
+  <body
+    style="
+      height: 100%;
+      background-image: linear-gradient(60deg, #070000, #a20000 30%);
+    "
+  >
+    <nav
+      style="background-image: linear-gradient(180deg, #ff0000, transparent)"
+    >
+      <div
+        class="content-fragment fragment-cta white"
+        style="position: fixed; top: 20px; left: 20px"
+      >
+        <a href="about.html" class="cta-link">
+          <div class="cta-box"></div>
+          <span class="cta-text white" style="font-size: 3rem">i</span>
+        </a>
+      </div>
+
+      <a href="../index.html" class="white">
+        <h1 class="Hero-title">غزة</h1>
+      </a>
+    </nav>
+    <section>
+      <div class="SeOfCards">
+        <button class="arrow left"><</button>
+        <div class="c">
+          <div class="box">
+            <div class="imgBx">
+              <img src="../assets/Gaza During War/Imegration.jpeg" />
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgBx">
+              <img src="../assets/Gaza During War/a kid and a tent.jpeg" />
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgBx">
+              <img src="../assets/Gaza During War/OutoFrubble2.jpeg" />
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgBx">
+              <img src="../assets/Gaza During War/outOfRubble.jpeg" />
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgBx">
+              <img src="../assets/Gaza During War/warTanks.jpeg" />
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgBx">
+              <img src="../assets/Gaza During War/Noleg.jpeg" />
+            </div>
+          </div>
+          <div class="box">
+            <div class="imgBx">
+              <img src="../assets/Gaza During War/killedChild.jpeg" />
+            </div>
+          </div>
+        </div>
+        <button class="arrow right">></button>
+      </div>
+      <a class="nextButton white" href="BeforeWar.html">
+        <h2>مجموعة اخرى ></h2>
+      </a>
+    </section>
+    <script type="text/javascript">
+      let Imeges = document.querySelector(".c");
+      let preimages = Imeges.innerHTML;
+      for (let i = 1; i < 43; i++) {
+        preimages =
+          preimages +
+          `<div class="box img-only"><div class="imgBx "><img src="../assets/Gaza During War/${i}.png" /></div></div>`;
+        Imeges.innerHTML = preimages;
+      }
+    </script>
+    <script type="text/javascript">
+      let slider = document.querySelector(".c");
+      let nextBtn = document.querySelector(".arrow.right");
+      let prevBtn = document.querySelector(".arrow.left");
+      nextBtn.onclick = () => {
+        slider.append(slider.querySelector(".box:first-child"));
+      };
+      prevBtn.onclick = () => {
+        slider.prepend(slider.querySelector(".box:last-child"));
+      };
+    </script>
+  </body>
+</html>

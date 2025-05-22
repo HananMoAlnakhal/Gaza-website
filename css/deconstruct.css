@@ -1,0 +1,85 @@
+:root {
+    --bg-color: #f8f4f4;
+    --card-width: 300px;
+    --card-height: 400px;
+    --black: #080808;
+    --white: #ffffff;
+    --accent: #ff2d55;
+    --grid-color: rgba(0, 0, 0, 0.08);
+    --frame-color: rgba(8, 8, 8, 0.8);
+    --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-fast: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.content-fragment {
+    position: relative;
+    overflow: hidden;
+}
+
+.fragment-cta {
+    margin-top: auto;
+    overflow: visible;
+}
+
+.cta-link {
+    text-decoration: none;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.cta-box {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: 100%;
+    background-color: var(--black);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-fast);
+}
+
+.cta-text {
+    position: relative;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--black);
+    transition: color var(--transition-fast);
+    transform: translateX(0);
+    transition: transform var(--transition-fast), opacity var(--transition-fast),
+        color var(--transition-fast);
+}
+
+
+.cta-link:hover .cta-box {
+    transform: scaleX(1);
+}
+
+.cta-link:hover .cta-text {
+    color: var(--white);
+}
+
+.text-card:hover .grid-line.horizontal {
+    transform: scaleX(1);
+}
+
+.text-card:hover .grid-line.vertical {
+    transform: scaleY(1);
+}
+
+.text-card:hover .bg-object {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0);
+}
+
+.text-card:hover .bg-object.square {
+    transform: rotate(45deg) translate(0, 0);
+}
+
+.text-card:hover .bg-object.triangle {
+    transform: translate(-50%, -50%) scale(1);
+}
